@@ -12,6 +12,7 @@
   --bcg-color-primery: #ffffff;
   --bcg-color-team-card: #ffffff;
   --bcg-color-work-card: #ffffff;
+  --bcg-color-features-icon: #f5f4fa;
 }
 
 p,
@@ -159,7 +160,47 @@ body {
   color: var(--color-accent);
 }
 
+.header-mail::before {
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url(../images/envelope.svg);
+  background-repeat: no-repeat;
+  background-size: 16px 12px;
+  background-position: center;
+}
+
+.header-tel::before {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  background-image: url(../images/smartphone.svg);
+  background-repeat: no-repeat;
+  background-size: 10px 16px;
+  background-position: center;
+}
+
 /* -----HERO----- */
+
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+  outline: 1px solid red;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-foto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 .hero {
   padding-top: 200px;
@@ -214,7 +255,35 @@ body {
   margin-right: 0;
 }
 
+.features-item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--bcg-color-features-icon);
+  border-radius: 4px;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/antenna\ 1.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/clock\ 1.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/diagram\ 1.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/astronaut\ 1.svg);
+}
+
 .features-title {
+  margin-top: 30px;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
