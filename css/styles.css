@@ -13,6 +13,9 @@
   --bcg-color-team-card: #ffffff;
   --bcg-color-work-card: #ffffff;
   --bcg-color-features-icon: #f5f4fa;
+  --social-med-clr-primery: #afb1b8;
+  --social-med-clr-hover: #ffffff;
+  --sicial-med-clr-bcg: #2196f3;
 }
 
 p,
@@ -143,7 +146,9 @@ body {
 
 .header-mail,
 .header-tel {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -160,28 +165,22 @@ body {
   color: var(--color-accent);
 }
 
-.header-mail::before {
-  display: inline-block;
-  content: "";
-  width: 16px;
-  height: 12px;
+.icon-mail {
   margin-right: 10px;
-  background-image: url(../images/envelope.svg);
-  background-repeat: no-repeat;
-  background-size: 16px 12px;
-  background-position: center;
+  fill: var(--primery-text-color);
 }
 
-.header-tel::before {
-  display: inline-block;
-  content: "";
-  width: 10px;
-  height: 16px;
+.icon-tel {
   margin-right: 10px;
-  background-image: url(../images/smartphone.svg);
-  background-repeat: no-repeat;
-  background-size: 10px 16px;
-  background-position: center;
+  fill: var(--primery-text-color);
+}
+
+.header-mail:hover .icon-mail,
+.header-tel:hover .icon-tel,
+.header-mail:focus .icon-mail,
+.header-tel:focus .icon-tel {
+  color: var(--color-accent);
+  fill: var(--color-accent);
 }
 
 /* -----HERO----- */
@@ -190,7 +189,6 @@ body {
   max-width: 1600px;
   height: 600px;
   margin: 0 auto;
-  outline: 1px solid red;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -353,8 +351,8 @@ body {
 }
 
 .team-content {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 16px;
 }
 
 .team-name {
@@ -372,6 +370,57 @@ body {
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.social-media-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.social-media-link {
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-media-icon {
+  fill: var(--social-med-clr-primery);
+}
+
+.social-media-link:hover,
+.social-media-link:focus {
+  background-color: var(--sicial-med-clr-bcg);
+}
+
+.social-media-link:hover .social-media-icon,
+.social-media-link:focus .social-media-icon {
+  fill: var(--social-med-clr-hover);
+}
+
+/* -----CLIENTS----- */
+
+.clients-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-title-color);
+}
+
+.clients-list {
+  display: flex;
 }
 
 /* -----FOOTER----- */
