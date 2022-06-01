@@ -16,6 +16,8 @@
   --social-med-clr-primery: #afb1b8;
   --social-med-clr-hover: #ffffff;
   --sicial-med-clr-bcg: #2196f3;
+  --clients-clr-icon: #afb1b8;
+  --clients-clr-hover: #2196f3;
 }
 
 p,
@@ -421,6 +423,33 @@ body {
 
 .clients-list {
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-link {
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--clients-clr-icon);
+  color: var(--clients-clr-icon);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-icon {
+  fill: currentColor;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--clients-clr-hover);
+  color: var(--clients-clr-hover);
 }
 
 /* -----FOOTER----- */
@@ -432,7 +461,7 @@ body {
 }
 
 .logo-footer {
-  display: block;
+  display: inline-block;
   margin-bottom: 20px;
   font-family: "Raleway";
   font-style: normal;
@@ -441,6 +470,16 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--third-text-color);
+}
+
+.main-footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-address {
+  width: 231px;
+  height: 81px;
 }
 
 .footer-item:not(:last-child) {
@@ -471,6 +510,56 @@ body {
 .footer-tel:hover,
 .footer-tel:focus {
   color: var(--color-accent);
+}
+
+.social-footer {
+  width: 206px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 70px;
+}
+
+.social-footer-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--third-text-color);
+  margin-bottom: 20px;
+  margin-right: auto;
+}
+
+.social-footer-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-footer-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-footer-link {
+  width: 44px;
+  height: 44px;
+  background-color: #ffffff10;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-footer-icon {
+  fill: #ffffff;
+}
+
+.social-footer-link:hover,
+.social-footer-link:focus {
+  background-color: var(--sicial-med-clr-bcg);
 }
 
 /* -----Portfolio.html page----- */
